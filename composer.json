@@ -1,5 +1,5 @@
 {
-    "name": "king052188/binaryloop-v4",
+    "name": "king052188/binaryloopv4",
     "description": "Binary. Unilevel and Leveling System for Multi-Marketing Business",
     "type": "Laravel",
     "license": "MIT",
@@ -17,7 +17,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "king052188\\BinaryLoops\\": "src/"
+            "king052188\\BinaryLoopsV4\\": "src/"
         }
     }
 }
