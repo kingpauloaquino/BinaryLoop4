@@ -22,37 +22,37 @@ Route::get('/bloops/info/{all?}', function($all = null) {
   if($all != null) {
     $a = true;
   }
-  return BinaryLoops::TestServices($a);
+  return BLCore::TestServices($a);
 });
 
 //
 
 Route::any('/bloops/v1/encode', function(Request $request) {
-  return BinaryLoops::Encode($request);
+  return BLCore::Encode($request);
 });
 
 Route::any('/bloops/v1/placement-validation', function(Request $request) {
-  return BinaryLoops::Placement_Validate($request);
+  return BLCore::Placement_Validate($request);
 });
 
 Route::any('/bloops/v1/member-pairing-status/{member_uid}', function($member_uid) {
-  return BinaryLoops::Member_Pairing($member_uid);
+  return BLCore::Member_Pairing($member_uid);
 });
 
 Route::any('/bloops/v1/member-structure-details/{member_uid}', function($member_uid) {
-  return BinaryLoops::Member_Structure_Details($member_uid);
+  return BLCore::Member_Structure_Details($member_uid);
 });
 
 Route::any('/bloops/v1/populate-genealogy/{username}', function($username) {
-  return BinaryLoops::Populate_Genealogy($username);
+  return BLCore::Populate_Genealogy($username);
 });
 
 Route::any('/bloops/v1/populate-leveling/{username}', function($username) {
-  return BinaryLoops::Populate_Leveling($username);
+  return BLCore::Populate_Leveling($username);
 });
 
 Route::any('/bloops/v1/populate-indirect/{member_uid}', function($member_uid) {
-  return BinaryLoops::Populate_Indirect($member_uid);
+  return BLCore::Populate_Indirect($member_uid);
 });
 
 Route::any('/bloops/v1/populate-leveling/{username}/{position}/{level}', function($username, $position, $level) {
@@ -60,11 +60,11 @@ Route::any('/bloops/v1/populate-leveling/{username}/{position}/{level}', functio
 });
 
 Route::any('/bloops/v1/populate-multiple-accounts/{member_uid}/{mobile}/{limit?}', function($username, $mobile) {
-  return BinaryLoops::Populate_Multiple_Accounts($username, $mobile);
+  return BLCore::Populate_Multiple_Accounts($username, $mobile);
 });
 
 Route::any('/bloops/v1/generate-activation-code', function(Request $request) {
-  return BinaryLoops::Generate_Activation_Code($request);
+  return BLCore::Generate_Activation_Code($request);
 });
 
 Route::any('/bloops/v1/forward-lookup/directs/{username}', function($username) {

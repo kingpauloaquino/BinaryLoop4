@@ -26,7 +26,7 @@ class BinaryLoopsServiceProvider extends ServiceProvider
     public function register()
     {
       $this->app->bind('king052188-binaryloops', function() {
-        return new BinaryLoops();
+        return new BLCore();
       });
 
       $this->app->bind('king052188-blhelper', function() {

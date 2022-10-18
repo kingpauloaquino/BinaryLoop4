@@ -9,7 +9,7 @@ use Carbon\Carbon;
 
 use BLHelper;
 
-class BinaryLoops
+class BLCore
 {
   private static $config_app;
   private static $config_services;
